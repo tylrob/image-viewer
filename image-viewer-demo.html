@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="css/viewer.css" />
+<script src="js/viewer.js"></script>
+
+<style>
+  #image {
+    max-width: 200px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+  }
+</style>
+
+<h1>Demo image viewer</h1>
+<p>Click thumbnail to open image viewer</p>
+<div>
+  <img id="image" src="img/algorithm.svg" alt="Picture">
+</div>
+
+<script>
+    const viewer = new Viewer(document.getElementById('image'), {
+      transition: false,
+      navbar: false,
+      button: true,
+      title: false,
+      toolbar: {
+        zoomIn: 4,
+        zoomOut: 4,
+        oneToOne: 4,
+        reset: 4,
+        prev: false,
+        play: false,
+        next: false,
+        rotateLeft: false,
+        rotateRight: false,
+        flipHorizontal: false,
+        flipVertical: false,
+      }
+    });
+</script>
